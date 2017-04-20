@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-npm-scripts-gui",     "homepage": "https://github.com/npmtest/node-npmtest-npm-scripts-gui",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-npm-scripts-gui.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  npm-scripts-gui (v0.0.24)  [![npm package](https://img.shields.io/npm/v/npmtest-npm-scripts-gui.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-npm-scripts-gui) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-npm-scripts-gui.svg)](https://travis-ci.org/npmtest/node-npmtest-npm-scripts-gui)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-npm-scripts-gui",
+    "keywords": [
+        "coverage",
+        "test",
+        "npm-scripts-gui"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_npm_scripts_gui.js",
+    "name": "npmtest-npm-scripts-gui",
+    "nameAlias": "npmtest_npm_scripts_gui",
+    "nameOriginal": "npmtest-npm-scripts-gui",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-npm-scripts-gui.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
