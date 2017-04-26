@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "#### basic test coverage for  npm-scripts-gui (v0.0.24)  [![npm package](https://img.shields.io/npm/v/npmtest-npm-scripts-gui.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-npm-scripts-gui) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-npm-scripts-gui.svg)](https://travis-ci.org/npmtest/node-npmtest-npm-scripts-gui)",
+    "description": "#### basic test coverage for  [npm-scripts-gui (v0.0.24)](https://github.com/samueleaton/npm-scripts-gui#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-npm-scripts-gui.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-npm-scripts-gui) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-npm-scripts-gui.svg)](https://travis-ci.org/npmtest/node-npmtest-npm-scripts-gui)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "utility2": "kaizhu256/node-utility2#alpha"
@@ -35,5 +35,5 @@
         "start": "PORT=${PORT:-8080} utility2 start test.js",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.1"
+    "version": "2017.4.26"
 }

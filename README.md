@@ -1,6 +1,6 @@
 # npmtest-npm-scripts-gui
 
-#### basic test coverage for  npm-scripts-gui (v0.0.24)  [![npm package](https://img.shields.io/npm/v/npmtest-npm-scripts-gui.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-npm-scripts-gui) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-npm-scripts-gui.svg)](https://travis-ci.org/npmtest/node-npmtest-npm-scripts-gui)
+#### basic test coverage for  [npm-scripts-gui (v0.0.24)](https://github.com/samueleaton/npm-scripts-gui#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-npm-scripts-gui.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-npm-scripts-gui) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-npm-scripts-gui.svg)](https://travis-ci.org/npmtest/node-npmtest-npm-scripts-gui)
 
 #### GUI for npm scripts
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-npm-scripts-gui/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-npm-scripts-gui/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-npm-scripts-gui/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-npm-scripts-gui/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-npm-scripts-gui/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-npm-scripts-gui/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-npm-scripts-gui/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-npm-scripts-gui/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-npm-scripts-gui/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-npm-scripts-gui/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-npm-scripts-gui/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-npm-scripts-gui/build/coverage.html/index.html)
 
@@ -35,36 +35,15 @@
 ```json
 
 {
-    "name": "npm-scripts-gui",
-    "productName": "NSG",
-    "version": "0.0.24",
-    "description": "GUI for npm scripts",
-    "main": "bin/cli.js",
+    "author": {
+        "name": "Sam Eaton"
+    },
     "bin": {
         "npm-scripts-gui": "bin/cli.js",
         "nsg": "bin/cli.js"
     },
-    "scripts": {
-        "stylus": "stylus -c src/styles/base.styl -u autoprefixer-stylus -o styles",
-        "stylus-themes": "stylus -c src/styles/themes -u autoprefixer-stylus -o styles/themes",
-        "transpile-scripts": "babel src/scripts --out-dir scripts",
-        "transpile-cli": "babel src/cli.js > bin/cli.js",
-        "transpile-index": "babel src/index.js > index.js",
-        "transpile-postinstall": "babel src/postInstall.js --out-file postInstall.js",
-        "test": "echo 'no tests'",
-        "postinstall": "node postInstall.js",
-        "update-version": "./bin/update_version.rb",
-        "prepublish": "./bin/prepublish.rb",
-        "fail": "echo 'i will fail!' ; exit 1"
-    },
-    "author": "Sam Eaton",
-    "license": "MIT",
-    "devDependencies": {
-        "autoprefixer-stylus": "^0.8.1",
-        "babel-cli": "^6.3.13",
-        "babel-preset-es2015": "^6.3.13",
-        "babel-preset-react": "^6.5.0",
-        "stylus": "^0.52.4"
+    "bugs": {
+        "url": "https://github.com/samueleaton/npm-scripts-gui/issues"
     },
     "dependencies": {
         "chalk": "^1.1.1",
@@ -77,10 +56,49 @@
         "react": "^0.14.7",
         "react-dom": "^0.14.7"
     },
+    "description": "GUI for npm scripts",
+    "devDependencies": {
+        "autoprefixer-stylus": "^0.8.1",
+        "babel-cli": "^6.3.13",
+        "babel-preset-es2015": "^6.3.13",
+        "babel-preset-react": "^6.5.0",
+        "stylus": "^0.52.4"
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "763e99f283159a365cacea6ea6844a42d665fb7a",
+        "tarball": "https://registry.npmjs.org/npm-scripts-gui/-/npm-scripts-gui-0.0.24.tgz"
+    },
+    "gitHead": "9f24c9165a3eb6b65ca395baa15de5d49442a58f",
+    "homepage": "https://github.com/samueleaton/npm-scripts-gui#readme",
+    "license": "MIT",
+    "main": "bin/cli.js",
+    "maintainers": [
+        {
+            "name": "same"
+        }
+    ],
+    "name": "npm-scripts-gui",
+    "optionalDependencies": {},
+    "productName": "NSG",
     "repository": {
         "type": "git",
-        "url": "https://github.com/samueleaton/npm-scripts-gui"
-    }
+        "url": "git+https://github.com/samueleaton/npm-scripts-gui.git"
+    },
+    "scripts": {
+        "fail": "echo 'i will fail!' ; exit 1",
+        "postinstall": "node postInstall.js",
+        "prepublish": "./bin/prepublish.rb",
+        "stylus": "stylus -c src/styles/base.styl -u autoprefixer-stylus -o styles",
+        "stylus-themes": "stylus -c src/styles/themes -u autoprefixer-stylus -o styles/themes",
+        "test": "echo 'no tests'",
+        "transpile-cli": "babel src/cli.js > bin/cli.js",
+        "transpile-index": "babel src/index.js > index.js",
+        "transpile-postinstall": "babel src/postInstall.js --out-file postInstall.js",
+        "transpile-scripts": "babel src/scripts --out-dir scripts",
+        "update-version": "./bin/update_version.rb"
+    },
+    "version": "0.0.24"
 }
 ```
 
